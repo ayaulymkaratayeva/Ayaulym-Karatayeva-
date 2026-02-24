@@ -1,16 +1,15 @@
-/* Starter CSS to edit */
 body {
-    font-family: Arial, sans-serif;
-    max-width: 600px;
-    margin: 40px auto;
-    padding: 20px;
-}
-
-h1 {
+    font-family: Arial;
     text-align: center;
+    background-color: #eef2ff;
+    padding: 40px;
 }
 
-#output {
-    margin-top: 20px;
-    font-weight: bold;
+input {
+    margin: 8px;
+    padding: 6px;
+}
+
+button {
+    padding: 8px 15px;
 }
