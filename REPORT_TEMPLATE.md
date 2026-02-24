@@ -1,118 +1,112 @@
-# Personal Assignment 1 Report Template
+# Personal Assignment 1 Report
 
 ## 1. Project Overview
 
 **Project Name:**  
-(write your project name)
+Sleep Hours Calculator
 
 **What does your calculator do?**  
-(Explain in 2–3 sentences what problem you are solving and what you calculate.)
-
-Example:  
-This calculator calculates Body Mass Index (BMI) using weight and height. It also classifies the result into health categories.
+This calculator measures how many hours a person slept based on bedtime and wake-up time. It also classifies the sleep duration as not enough, healthy, or too much sleep.
 
 ---
 
 ## 2. Inputs
 
-List and explain all inputs you used.
-
 | Input Name | Unit | What it Represents |
 |---|---|---|
-| Example: Weight | kg | User body weight |
-| Example: Height | cm | User height |
+| Bedtime | Time (HH:MM) | The time when the user goes to sleep |
+| Wake Time | Time (HH:MM) | The time when the user wakes up |
 
-Explain in words:  
-(Why did you choose these inputs? Why are they important?)
+**Explanation:**  
+I chose these inputs because sleep duration depends on the time a person goes to bed and wakes up. These are measurable and realistic daily values.
 
 ---
 
 ## 3. Process (Calculation Logic)
 
 **Formula or Calculation Used:**  
-(Write your formula or explain how calculation works.)
 
-Example:  
-BMI = weight / (height in meters)^2
+Sleep Hours = (Wake Time − Bedtime)
+
+Since JavaScript calculates time in milliseconds, the formula used is:
+
+Sleep Hours = (wake − bed) / (1000 × 60 × 60)
 
 **Steps:**
-1. Get input values from HTML  
-2. Convert values if needed (example: cm → meters)  
-3. Perform calculation  
-4. Store result in variable  
+1. Get input values from HTML using `getElementById`.
+2. Convert time strings into Date objects.
+3. If wake time is earlier than bedtime, add one day.
+4. Subtract bedtime from wake time.
+5. Convert milliseconds into hours.
+6. Store result in a variable.
 
 ---
 
 ## 4. Conditional Logic (if / else)
 
-Explain how your program interprets the result.
+The program interprets sleep duration as:
 
-Example:
+- If sleep < 7 hours → Not enough sleep  
+- If sleep between 7 and 9 hours → Healthy sleep  
+- If sleep > 9 hours → Too much sleep  
 
-If BMI < 18.5 → Underweight  
-If BMI 18.5 – 24.9 → Normal  
-If BMI ≥ 25 → Overweight  
-
-Explain why you chose these ranges (if using real model, mention it).
+These ranges are based on general adult sleep recommendations (7–9 hours).
 
 ---
 
 ## 5. Output
 
-What does your program show to the user?
+The program shows:
 
-- Calculated value  
-- Category or interpretation  
-- Personalized message (if used)  
-- Optional: binary output (if implemented)
+- Calculated number of hours slept  
+- Sleep quality category (Not enough / Healthy / Too much)
+
+The result is displayed directly in HTML using `innerHTML`.
 
 ---
 
 ## 6. Edge Cases / Unusual Inputs
 
-What happens if:
-
-- User enters zero?  
-- User enters negative number?  
-- User leaves input empty?  
-
-Explain how your program handles this.
+- If the user leaves an input empty → The program shows a message: “Please enter both times.”
+- If wake time is earlier than bedtime → The program assumes sleep passed midnight and adds one day.
+- Negative numbers are not possible because the input type is "time".
 
 ---
 
-## 7. Optional Features (If You Added Any)
+## 7. Optional Features
 
-Examples:
-- Binary conversion  
-- Extra calculations  
-- Extra UI features  
-- Validation messages  
+- Automatic midnight adjustment
+- Validation message if inputs are empty
+- Styled user interface with CSS
 
 ---
 
 ## 8. How to Run the Project
 
-1. Download or clone repository  
-2. Open `index.html` in browser  
-3. Enter input values  
-4. Click calculate button  
+1. Open the GitHub Pages link:
+   https://your-username.github.io/programming-assignment-1/
+2. Enter bedtime and wake time.
+3. Click the calculate button.
+4. View the result directly in the browser.
 
----
+## 9. AI Usage
 
-## 9. AI Usage (If Used)
+Yes.
 
-Did you use AI tools?  
-(Yes / No)
+I used AI to help with:
+- JavaScript time calculation structure
+- Syntax corrections
 
-If yes, explain briefly:
-- What you asked AI for  
-- What you modified yourself  
-- What you fully understand now  
+I fully understand:
+- How variables store values
+- How time difference is calculated
+- How if/else conditions classify results
+- How output is displayed in HTML
 
 ---
 
 ## 10. Reflection
 
-What did you learn from this assignment?
-
-(2–4 sentences)
+From this assignment, I learned how input → process → output works in JavaScript.  
+I practiced using variables, mathematical calculations, and conditional logic.  
+I also learned how HTML, CSS, and JavaScript work together in a web project.
