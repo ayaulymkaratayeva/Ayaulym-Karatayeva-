@@ -1,22 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Personal Calculator</title>
+    <title>Sleep Hours Calculator</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<h1>Personal Calculator</h1>
+<h2>Sleep Hours Calculator</h2>
 
-<form id="calculatorForm">
-    <!-- Add input fields here -->
-</form>
+<p>Go to bed:</p>
+<input type="time" id="bedtime">
 
-<div id="output">
-    <!-- Results will be displayed here -->
-</div>
+<p>Wake up:</p>
+<input type="time" id="waketime">
+
+<br><br>
+
+<button onclick="calculate()">Calculate</button>
+
+<div id="result"></div>
 
 <script src="script.js"></script>
+
 </body>
 </html>
