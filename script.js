@@ -3,7 +3,7 @@ function calculate() {
     let bedtime = document.getElementById("bedtime").value;
     let waketime = document.getElementById("waketime").value;
 
-    if (!bedtime || !waketime) {
+    if (bedtime === "" || waketime === "") {
         document.getElementById("result").innerHTML =
             "Please enter both times.";
         return;
@@ -18,7 +18,7 @@ function calculate() {
 
     let hours = (wake - bed) / (1000 * 60 * 60);
 
-    let message = "";
+    let message;
 
     if (hours < 7) {
         message = "Not enough sleep 😴";
@@ -31,6 +31,5 @@ function calculate() {
     }
 
     document.getElementById("result").innerHTML =
-        "You slept " + hours.toFixed(2) + " hours.<br>" +
-        message;
+        "You slept " + hours.toFixed(2) + " hours.<br>" + message;
 }
