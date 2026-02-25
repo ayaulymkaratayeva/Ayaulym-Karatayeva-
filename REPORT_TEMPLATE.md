@@ -84,7 +84,7 @@ The result is displayed directly in HTML using `innerHTML`.
 ## 8. How to Run the Project
 
 1. Open the GitHub Pages link:
-   https://your-username.github.io/programming-assignment-1/
+   file:///C:/Users/inVisionU/OneDrive/Desktop/%D0%9D%D0%BE%D0%B2%D0%B0%D1%8F%20%D0%BF%D0%B0%D0%BF%D0%BA%D0%B0/index.HTML
 2. Enter bedtime and wake time.
 3. Click the calculate button.
 4. View the result directly in the browser.
